@@ -1,6 +1,5 @@
 package fr.unilim.iut.visitor;
 
-import fr.unilim.iut.kebab.Assiette;
 import fr.unilim.iut.kebab.ingredients.Agneau;
 import fr.unilim.iut.kebab.ingredients.Boeuf;
 import fr.unilim.iut.kebab.ingredients.Crevette;
@@ -54,7 +53,4 @@ public class VisiteurDeRegimeVegetarien implements VisiteurDeRegime {
 		return true;
 	}
 
-	public boolean visit(Assiette assiette) {
-		return true;
-	}
 }

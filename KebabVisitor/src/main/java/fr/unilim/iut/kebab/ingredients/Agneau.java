@@ -10,10 +10,7 @@ public class Agneau extends Ingredient {
         super(nom,kebab);
     }
  
-    @Override
-    public boolean isVegetarien() {
-        return false;
-    }
+   
 
     @Override
     public boolean isPescetarien() {

@@ -10,10 +10,7 @@ public class Crevette extends Ingredient {
   
     }
     
-    @Override
-    public boolean isVegetarien() {
-        return false;
-    }
+   
 
     @Override
     public boolean isPescetarien() {

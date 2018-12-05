@@ -1,6 +1,5 @@
 package fr.unilim.iut.visitor;
 
-import fr.unilim.iut.kebab.Assiette;
 import fr.unilim.iut.kebab.ingredients.Agneau;
 import fr.unilim.iut.kebab.ingredients.Boeuf;
 import fr.unilim.iut.kebab.ingredients.Crevette;
@@ -33,7 +32,5 @@ public interface VisiteurDeRegime {
 	public boolean visit(Thon thon);
 
 	public boolean visit(Tomate tomate);
-
-	public boolean visit(Assiette assiette);
 
 }

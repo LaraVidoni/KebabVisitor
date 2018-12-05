@@ -4,7 +4,7 @@ import java.util.List;
 import fr.unilim.iut.kebab.Kebab;
 import fr.unilim.iut.visitor.VisiteurDeRegime;
 
-public abstract class Ingredient implements Kebab {
+public abstract class Ingredient extends Kebab {
 
 	protected String nom;
 	protected Kebab kebab;
@@ -20,14 +20,10 @@ public abstract class Ingredient implements Kebab {
 		return ingredients;
 	}
 
-	public boolean isVegetarien() {
-		return kebab.isVegetarien();
-		// Il faut déléguer conformément à la documentation du pattern Decorator
-	}
 
 	public boolean isPescetarien() {
 		return kebab.isPescetarien();
 	}
 
-	abstract boolean accept(VisiteurDeRegime visiteur);
+	public abstract boolean accept(VisiteurDeRegime visiteur);
 }

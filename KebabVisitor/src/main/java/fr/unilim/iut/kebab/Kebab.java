@@ -2,9 +2,17 @@ package fr.unilim.iut.kebab;
 
 import java.util.List;
 import fr.unilim.iut.kebab.ingredients.Ingredient;
+import fr.unilim.iut.visitor.VisiteurDeRegimeVegetarien;
 
-public interface Kebab {
-	List<Ingredient> getIngredients();
-	boolean isVegetarien();
-	boolean isPescetarien();
+public abstract class Kebab {
+	public abstract List<Ingredient> getIngredients();
+	public boolean isVegetarien() {
+		VisiteurDeRegimeVegetarien visiteur = new VisiteurDeRegimeVegetarien();
+		for (Ingredient ingredient : this.getIngredients()) {
+			if (!ingredient.accept(visiteur))
+				return false;
+		}
+		return true;
+	}
+	public abstract boolean isPescetarien();
 }
