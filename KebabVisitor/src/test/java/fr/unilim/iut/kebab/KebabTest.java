@@ -81,6 +81,9 @@ public class KebabTest {
 
 		assertThat(kebabBoeuf.getIngredients()).extracting("nom").containsExactly("pita", "oignon blanc",
 				"sauce algérienne", "boeuf du limousin", "tomate rouge");
+		
+		assertThat(kebabSansGluten.getIngredients()).extracting("nom").containsExactly("galette de sarrasin", "oignon blanc",
+				"sauce algérienne", "boeuf du limousin", "tomate rouge");
 	}
 
 	// Vegetarien
@@ -107,6 +110,10 @@ public class KebabTest {
 	@Test
 	public void isVegetarien_devrait_retourner_faux_pour_kebabBoeuf() {
 		assertThat(kebabBoeuf.isVegetarien()).isFalse();
+	}
+	
+	public void isVegetarien_devrait_retourner_false_pour_kebabSansGluten() {
+		assertThat(kebabSansGluten.isVegetarien()).isFalse();
 	}
 
 	// Pescetarien
@@ -135,7 +142,32 @@ public class KebabTest {
 		assertThat(kebabBoeuf.isPescetarien()).isFalse();
 	}
 	
+	public void isPescetarien_devrait_retourner_false_pour_kebabSansGluten() {
+		assertThat(kebabSansGluten.isPescetarien()).isFalse();
+	}
+	
 	// Sans gluten
+	@Test
+	public void isSansGluten_devrait_retourner_faux_pour_kebabCarnivore() {
+		assertThat(kebabCarnivore.isSansGluten()).isFalse();
+	}
+
+	@Test
+	public void isSansGluten_devrait_retourner_false_pour_kebabVegetarien() {
+		assertThat(kebabVegetarien.isSansGluten()).isFalse();
+	}
+
+	@Test
+	public void isSansGluten_devrait_retourner_vrai_pour_kebabPoisson() {
+		assertThat(kebabPoisson.isSansGluten()).isFalse();
+	}
+
+	@Test
+	public void isSansGluten_devrait_retourner_vrai_pour_kebabCrevette() {
+		assertThat(kebabCrevette.isSansGluten()).isFalse();
+	}
+	
+	
 	@Test
 	public void isSansGluten_devrait_retourner_false_pour_kebabBoeuf() {
 		assertThat(kebabBoeuf.isSansGluten()).isFalse();
