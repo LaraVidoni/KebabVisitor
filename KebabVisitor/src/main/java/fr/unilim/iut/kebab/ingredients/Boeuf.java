@@ -9,12 +9,6 @@ public class Boeuf extends Ingredient{
 		super(nom, kebab);
 	}
 
-	
-
-    @Override
-    public boolean isPescetarien() {
-        return false;
-    }
     
     @Override
     public boolean accept(VisiteurDeRegime visiteur) {

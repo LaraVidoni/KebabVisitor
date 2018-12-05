@@ -12,10 +12,6 @@ public class Agneau extends Ingredient {
  
    
 
-    @Override
-    public boolean isPescetarien() {
-        return false;
-    }
     
     @Override
     public boolean accept(VisiteurDeRegime visiteur) {

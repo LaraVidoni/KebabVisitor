@@ -12,9 +12,7 @@ public class Assiette extends Kebab {
 		return new LinkedList<>();
 	}
 
-	public boolean isPescetarien() {
-		return true;
-	}
+
 
 	
 }

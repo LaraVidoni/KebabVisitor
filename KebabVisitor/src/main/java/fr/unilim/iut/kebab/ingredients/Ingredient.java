@@ -21,9 +21,6 @@ public abstract class Ingredient extends Kebab {
 	}
 
 
-	public boolean isPescetarien() {
-		return kebab.isPescetarien();
-	}
 
 	public abstract boolean accept(VisiteurDeRegime visiteur);
 }
