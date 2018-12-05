@@ -1,6 +1,7 @@
 package fr.unilim.iut.kebab.ingredients;
 
 import fr.unilim.iut.kebab.Kebab;
+import fr.unilim.iut.visitor.VisiteurDeRegime;
 
 public class Crevette extends Ingredient {
 
@@ -27,5 +28,8 @@ public class Crevette extends Ingredient {
         car son comportement n'apporte rien de nouveau ... ;-) */
     }
     
- 
+    @Override
+    public boolean accept(VisiteurDeRegime visiteur) {
+    	return visiteur.visit(this);
+    }
 }
