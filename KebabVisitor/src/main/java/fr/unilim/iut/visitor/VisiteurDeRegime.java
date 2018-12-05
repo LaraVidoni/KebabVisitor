@@ -4,6 +4,7 @@ import fr.unilim.iut.kebab.ingredients.Agneau;
 import fr.unilim.iut.kebab.ingredients.Boeuf;
 import fr.unilim.iut.kebab.ingredients.Crevette;
 import fr.unilim.iut.kebab.ingredients.Fromage;
+import fr.unilim.iut.kebab.ingredients.GaletteDeSarrasin;
 import fr.unilim.iut.kebab.ingredients.Oignon;
 import fr.unilim.iut.kebab.ingredients.Pain;
 import fr.unilim.iut.kebab.ingredients.Salade;
@@ -20,6 +21,8 @@ public interface VisiteurDeRegime {
 	public boolean visit(Crevette crevette);
 
 	public boolean visit(Fromage fromage);
+	
+	public boolean visit(GaletteDeSarrasin galetteDeSarrasin);
 
 	public boolean visit(Oignon oignon);
 

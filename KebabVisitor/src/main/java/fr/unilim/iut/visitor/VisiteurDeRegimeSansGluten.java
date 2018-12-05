@@ -12,14 +12,14 @@ import fr.unilim.iut.kebab.ingredients.Sauce;
 import fr.unilim.iut.kebab.ingredients.Thon;
 import fr.unilim.iut.kebab.ingredients.Tomate;
 
-public class VisiteurDeRegimePescetarien implements VisiteurDeRegime {
+public class VisiteurDeRegimeSansGluten implements VisiteurDeRegime {
 
 	public boolean visit(Agneau agneau) {
-		return false;
+		return true;
 	}
 
 	public boolean visit(Boeuf boeuf) {
-		return false;
+		return true;
 	}
 
 	public boolean visit(Crevette crevette) {
@@ -29,13 +29,15 @@ public class VisiteurDeRegimePescetarien implements VisiteurDeRegime {
 	public boolean visit(Fromage fromage) {
 		return true;
 	}
-
+	public boolean visit(GaletteDeSarrasin galetteDeSarrasin) {
+		return true;
+	}
 	public boolean visit(Oignon oignon) {
 		return true;
 	}
 
 	public boolean visit(Pain pain) {
-		return true;
+		return false;
 	}
 
 	public boolean visit(Salade salade) {
@@ -51,10 +53,6 @@ public class VisiteurDeRegimePescetarien implements VisiteurDeRegime {
 	}
 
 	public boolean visit(Tomate tomate) {
-		return true;
-	}
-
-	public boolean visit(GaletteDeSarrasin galetteDeSarrasin) {
 		return true;
 	}
 

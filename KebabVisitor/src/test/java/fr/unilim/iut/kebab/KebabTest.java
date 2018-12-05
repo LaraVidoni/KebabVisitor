@@ -25,6 +25,7 @@ public class KebabTest {
 	private Kebab kebabPoisson;
 	private Kebab kebabCrevette;
 	private Kebab kebabBoeuf;
+	private Kebab kebabSansGluten;
 
 	@Before
 	public void setUp() {
@@ -42,6 +43,13 @@ public class KebabTest {
 		kebabBoeuf = new Sauce("sauce algérienne", kebabBoeuf);
 		kebabBoeuf = new Boeuf("boeuf du limousin", kebabBoeuf);
 		kebabBoeuf = new Tomate("tomate rouge", kebabBoeuf);
+		
+		kebabSansGluten = new Assiette();
+		kebabSansGluten = new GaletteDeSarrasin("galette de sarrasin", kebabSansGluten);
+		kebabSansGluten = new Oignon("oignon blanc", kebabSansGluten);
+		kebabSansGluten = new Sauce("sauce algérienne", kebabSansGluten);
+		kebabSansGluten = new Boeuf("boeuf du limousin", kebabSansGluten);
+		kebabSansGluten = new Tomate("tomate rouge", kebabSansGluten);
 
 		kebabVegetarien = new Sauce("sauce algérienne", new Tomate("tomate rouge",
 				new Oignon("oignon blanc", new Fromage("gruyere", new Pain("pita", new Assiette())))));
@@ -125,5 +133,16 @@ public class KebabTest {
 	@Test
 	public void isPescetarien_devrait_retourner_false_pour_kebabBoeuf() {
 		assertThat(kebabBoeuf.isPescetarien()).isFalse();
+	}
+	
+	// Sans gluten
+	@Test
+	public void isSansGluten_devrait_retourner_false_pour_kebabBoeuf() {
+		assertThat(kebabBoeuf.isSansGluten()).isFalse();
+	}
+	
+	@Test
+	public void isSansGluten_devrait_retourner_true_pour_kebabSansGluten() {
+		assertThat(kebabSansGluten.isSansGluten()).isTrue();
 	}
 }
